@@ -28,7 +28,7 @@ For a comparison of the original auditory model (written in MATLAB/C) and the Wa
 ```
 compare_model.m
 ```
-in MATLAB. It executes both model implementations, measures computation times, plots IHCograms, and measures the approximation quality in terms of a signal-to-distortion ratio (SDR) as specified in Eq. (3) in the Nagathil & Bruce (2023) paper. Note, that the MATLAB implementation is executed on all available CPU cores in parallel.
+in MATLAB. It executes both model implementations, measures computation times, plots IHCograms, and measures the approximation quality in terms of a signal-to-distortion ratio (SDR) as specified in Eq. (3) in the Nagathil & Bruce (2023) paper. Note, that the MATLAB implementation is executed on all available CPU cores in parallel. The source of the original model code can be found here: https://www.ece.mcmaster.ca/~ibruce/zbcANmodel/zbcANmodel.htm
 
 ## Prerequisites
 
