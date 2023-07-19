@@ -1,0 +1,29 @@
+clc
+clear all
+
+% audio_file = '/home/anagathil/AudioData/Speech/TIMIT/fcft0_sx98.wav';
+
+audio_file  = '/home/anagathil/AudioData/Music/DSD100_16kHz/Mixtures/Dev/067 - Georgia Wonder - Siren/mixture.wav';
+
+% model fiber parameters
+numcfs      = 80;
+CFs         = logspace(log10(125),log10(8e3),numcfs);  % CF in Hz;
+species     = 2;                                        % Human cochlear tuning 
+
+stimdb      = 60;
+stimT       = 3;
+[audio, fs] = audioread(audio_file);
+
+% extract audio segment
+audio       = audio(1:fs*stimT);
+
+% normalize audio segment
+audio       = audio/rms(audio)*20e-6*10^(stimdb/20);
+
+tic
+vihc_mat = generate_ihcgram_BEZ2018_parallelized(audio,fs,species,numcfs,CFs);
+% convert to single precision
+%     vihc_mat = cast(vihc_mat,'single'); 
+toc
+    
+

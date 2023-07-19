@@ -1,0 +1,35 @@
+exp_name: 'config_musan31rfa3-1fullSet'
+
+### Data path
+path: '/data/anagathil/AudioData/neurogram_spl_snr_data_sets_10s/'
+
+seed: 42
+
+### output path
+log_dir: 'runs_musan/'
+checkpoint_dir: 'checkpoint/'
+model_dir: 'model/'
+
+### learning parameters
+learningRate: 0.0005     #
+maxEpochs: 120          # Number of steps to train
+batchSize: 1            #
+numWorkers: 4
+lossFcn: 'L1'
+ihcogramType: 'vihc_single'
+scaleType: 'symlog'
+scaleWeight: 100
+esPatience: 30
+lrsPatience: 1
+lrsFactor: 0.5
+
+### network parameters
+nLayers: 9
+nStacks: 4
+nResChannels: 127
+nSkipChannels: 127
+nChannels: 80
+sig_len: 10
+numOutputLayers: 2
+
+printmode: 'file'
