@@ -25,7 +25,7 @@ if __name__ == '__main__':
     parser.add_argument("--spl", type=float, default=60, help='Sound pressure level, at which signal is processed.')
     parser.add_argument("--totdur", type=float, default=4, help='Segment duration.')
     parser.add_argument("--segdur", type=float, default=1, help='Segment duration.')
-    parser.add_argument("--model", type=str, default="./model/musan31rfa3-1fullSet_20220628-164135.pt", help='Path to model parameters (.pt file)')
+    parser.add_argument("--model", type=str, default="./model/musan31rfa3-1fullSet_20231014-145738.pt", help='Path to model parameters (.pt file)')
     parser.add_argument("--config", type=str, default="./config/config31rfa3-1fullSet.yaml", help='Path to config file (.yaml file)')
     parser.add_argument("--proc", type=str, choices=["cpu","cuda"], default="cpu", help='Choose cpu or gpu processing.')
     parser.add_argument("--matlabComp", type=int, choices=[0,1], default=0, help='Enable/disable comparison with original MATLAB/C auditory model code.')
