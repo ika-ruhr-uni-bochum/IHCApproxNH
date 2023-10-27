@@ -6,6 +6,12 @@ When using the WaveNet auditory model, please cite the following paper (see BibT
 **Nagathil, A., & Bruce, I. C. (2023). WaveNet-based approximation of a cochlear filtering and hair cell transduction model. The Journal of the Acoustical Society of America, 154(1), 191-202.**
 https://doi.org/10.1121/10.0020068
 
+### Important comment
+
+After an initial release of the model parameters, the model was re-trained using the same model configuration as described in the paper. However, instead of halving the learning rate after stagnation of the validation loss, here we set the new
+learning rate to a value of 0.8 times the previous learning rate. This improved the overall approximation accuracy, especially at higher characteristic frequencies and lower sound pressure levels.
+Please indicate this change when citing the paper.
+
 ## Instructions for use
 
 This repository contains code written in Python/PyTorch and MATLAB and allows a comparison of the WaveNet approximation and the original auditory model. To run the WaveNet model only,
