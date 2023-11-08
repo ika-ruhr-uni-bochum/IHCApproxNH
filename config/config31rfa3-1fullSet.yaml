@@ -21,7 +21,7 @@ scaleType: 'symlog'
 scaleWeight: 100
 esPatience: 30
 lrsPatience: 1
-lrsFactor: 0.5
+lrsFactor: 0.8
 
 ### network parameters
 nLayers: 9
